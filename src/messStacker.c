@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <string.h>
 #include "messStacker.h"
 
 //définition des constantes
@@ -34,9 +35,23 @@ bool haveMessage(){
 
 uint8_t checksumMessage(uint8_t cmd, char data[],uint8_t size){
     //calcul un checksum sur les valeurs cmd et data
-    uint8_t sum = cmd;
+    uint8_t sum = cmd; 
     for(int i=0; i<size; i++){
         sum += (uint8_t)data[i];
     }
     return sum;
+}
+
+bool sendMessage(uint8_t cmd, char data[],uint8_t size){
+    //Envoi un message dans la file 
+    if(messCount>=SIZE_STACK) return false;
+    int pos = lastPos+1;
+    stackMess[pos].cmd = cmd;
+    memcpy(stackMess[pos].data, data, size);
+    stackMess[pos].size = size;
+    stackMess[pos].checksum = checksumMessage(cmd, data, size);
+    messCount += 1;
+    lastPos += 1;
+    if(lastPos==SIZE_STACK) lastPos=0;
+    return true;
 }
