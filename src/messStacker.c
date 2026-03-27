@@ -31,3 +31,12 @@ bool haveMessage(){
     if(lastPos==-1) return false;
     else return true;
 }
+
+uint8_t checksumMessage(uint8_t cmd, char data[],uint8_t size){
+    //calcul un checksum sur les valeurs cmd et data
+    uint8_t sum = cmd;
+    for(int i=0; i<size; i++){
+        sum += (uint8_t)data[i];
+    }
+    return sum;
+}

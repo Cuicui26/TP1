@@ -20,6 +20,7 @@ uint8_t curMessageChecksum();
 
 bool curMessageData(unsigned char buff[],  int lenghtMax);
 
+//calcul un checksum sur les valeurs cmd et data
 uint8_t checksumMessage(uint8_t cmd, char data[],uint8_t size);
 
 #endif

@@ -32,13 +32,4 @@ Il existe pour ce projet un dépôt distant disponible sur github à cet url : h
 ## API de la librairie
 - haveMessage : vérifie si il y a un message dans la file
 
-- curMessageCmd, curMessageSize, et curMessageChecksum : ces 3
-fonctions ne prennent pas d’arguments et retourne un entier non signé
-sur 8 bits.
-
-- curMessageData : cette fonction prend un tableau d’octet buff en
-argument, un entier lengthMax, et retourne une valeur booléenne.
-
-- checksumMessage : cette fonction attend 3 arguments : cmd, data et
-size, tous de types identiques à ceux de la fonction sendMessage, et
-elle retourne un entier non signé sur 8 bits.
+- checksumMessage : Cette fonction n’agit pas sur la file. Elle calcul un checksum sur les valeurs cmd et data qui lui sont fournies en argument
