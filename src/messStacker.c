@@ -4,7 +4,7 @@
 #include "messStacker.h"
 
 //définition des constantes
-#define MESS_STACKER_VERSION "v0.0.01"
+#define MESS_STACKER_VERSION "v0.1.00"
 #define SIZE_MAX_DATA 57
 #define SIZE_STACK 30
 
