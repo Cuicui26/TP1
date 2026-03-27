@@ -79,7 +79,17 @@ bool curMessageData(unsigned char buff[],  int lenghtMax){
     //Remplis le tableau buff avec les valeurs du tableau data du message courant
     if(!haveMessage() || lenghtMax<curMessageSize())return false;
     for(int i=0; i<curMessageSize(); i++){
-        buff[i] = stackMess[curPos].data[i];
+        buff[i] = stackMess[curPos].data[i]; //copie case par case le tableau
     }
+    return true;
+}
+
+
+bool nextMessage(){
+    //passe au message suivant dans la file
+    if(!haveMessage()) return false;
+    curPos += 1;
+    if(curPos == SIZE_STACK) curPos = 0;
+    messCount -= 1; //le message précédent est jeté
     return true;
 }

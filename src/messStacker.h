@@ -13,6 +13,7 @@ bool sendMessage(uint8_t cmd, char data[],uint8_t size);
 //Vérifie si il y a un message dans la file
 bool haveMessage();
 
+//passe au message suivant dans la file
 bool nextMessage();
 
 //Renvoi le cmd du message courant

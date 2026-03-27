@@ -30,12 +30,14 @@ est que la file de message est matérialisée par un tableau circulaire
 Il existe pour ce projet un dépôt distant disponible sur github à cet url : https://github.com/Cuicui26/TP1.git
 
 ## API de la librairie
-- haveMessage : Vérifie si il y a un message dans la file
+- haveMessage : Vérifie si il y a un message dans la file.
 
-- checksumMessage : Cette fonction n’agit pas sur la file. Elle calcul un checksum sur les valeurs cmd et data qui lui sont fournies en argument
+- checksumMessage : Cette fonction n’agit pas sur la file. Elle calcul un checksum sur les valeurs cmd et data qui lui sont fournies en argument.
 
-- sendMessage : Place le message décrit en argument dans la file
+- sendMessage : Place le message décrit en argument dans la file.
 
-- curMessageCmd, curMessageSize, curMessageChecksum : Fourni respectivement les valeurs, cmd, size et checksum du message courant
+- curMessageCmd, curMessageSize, curMessageChecksum : Fourni respectivement les valeurs, cmd, size et checksum du message courant.
 
 - curMessageData : rempli le tableau buff donné en argument avec les n premières cases du tableau data du message courant (n étant la valeur size du message courant). Puis, après avoir fait ça, retourne true.
+
+- nextMessage : permet de passer au message suivant dans la file.
