@@ -25,3 +25,6 @@ est que la file de message est matérialisée par un tableau circulaire
 - src : Contient le code source du projet (les .c et .h)
 
 - test : zone d'essais durant la phase de développement
+
+## Dépôt distant
+Il existe pour ce projet un dépôt distant disponible sur github à cet url : https://github.com/Cuicui26/TP1.git
