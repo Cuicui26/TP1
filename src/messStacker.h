@@ -25,6 +25,7 @@ uint8_t curMessageSize();
 //Renvoi le checksum du message courant
 uint8_t curMessageChecksum();
 
+//Remplis le tableau buff avec les valeurs du tableau data du message courant
 bool curMessageData(unsigned char buff[],  int lenghtMax);
 
 //calcul un checksum sur les valeurs cmd et data

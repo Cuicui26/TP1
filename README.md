@@ -37,3 +37,5 @@ Il existe pour ce projet un dépôt distant disponible sur github à cet url : h
 - sendMessage : Place le message décrit en argument dans la file
 
 - curMessageCmd, curMessageSize, curMessageChecksum : Fourni respectivement les valeurs, cmd, size et checksum du message courant
+
+- curMessageData : rempli le tableau buff donné en argument avec les n premières cases du tableau data du message courant (n étant la valeur size du message courant). Puis, après avoir fait ça, retourne true.

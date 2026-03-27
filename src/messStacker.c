@@ -74,3 +74,12 @@ uint8_t curMessageChecksum(){
     uint8_t checksum = stackMess[curPos].checksum;
     return checksum;
 }
+
+bool curMessageData(unsigned char buff[],  int lenghtMax){
+    //Remplis le tableau buff avec les valeurs du tableau data du message courant
+    if(!haveMessage() || lenghtMax<curMessageSize())return false;
+    for(int i=0; i<curMessageSize(); i++){
+        buff[i] = stackMess[curPos].data[i];
+    }
+    return true;
+}
