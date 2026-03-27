@@ -12,7 +12,7 @@ void getMessStackerVersion(){
 
 struct message{
     uint8_t cmd;
-    char * data[SIZE_MAX_DATA];
+    char data[SIZE_MAX_DATA];
     uint8_t size;
     uint8_t checksum;
 }Message;

@@ -28,3 +28,23 @@ est que la file de message est matérialisée par un tableau circulaire
 
 ## Dépôt distant
 Il existe pour ce projet un dépôt distant disponible sur github à cet url : https://github.com/Cuicui26/TP1.git
+
+## API de la librairie
+- sendMessage : cette fonction attend 3 arguments : cmd, data et size;
+et elle retourne une valeur de type booléenne. Les arguments cmd et size
+seront des entiers non signés sur 8 bits, et data sera un tableau de
+type char.
+
+- haveMessage, nextMessage : ces 2 fonctions ne prennent pas d’argument,
+et retourne une valeur booléenne.
+
+- curMessageCmd, curMessageSize, et curMessageChecksum : ces 3
+fonctions ne prennent pas d’arguments et retourne un entier non signé
+sur 8 bits.
+
+- curMessageData : cette fonction prend un tableau d’octet buff en
+argument, un entier lengthMax, et retourne une valeur booléenne.
+
+- checksumMessage : cette fonction attend 3 arguments : cmd, data et
+size, tous de types identiques à ceux de la fonction sendMessage, et
+elle retourne un entier non signé sur 8 bits.
