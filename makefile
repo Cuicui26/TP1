@@ -5,10 +5,13 @@ TEST = test
 
 defaut : $(BIN)/test
 
+#alias pour messStacker
+messStacker : $(BUILD)/messStacker.o 
 
 help :
 	@echo "Cible disponible :"
-	@echo "	 - messStacker : génère le programme final (défaut)"
+	@echo "	 - test : génère le programme final de test (défaut)"
+	@echo "  - messStacker : génère la librairie messStacker"
 	@echo "	 - clean : nettoyage des .o"
 	@echo "	 - help : affichage de l'aide"
 
