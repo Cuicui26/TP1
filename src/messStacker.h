@@ -15,10 +15,14 @@ bool haveMessage();
 
 bool nextMessage();
 
+//Renvoi le cmd du message courant
 uint8_t curMessageCmd();
 
+//Renvoi la size du message courant
 uint8_t curMessageSize();
 
+
+//Renvoi le checksum du message courant
 uint8_t curMessageChecksum();
 
 bool curMessageData(unsigned char buff[],  int lenghtMax);

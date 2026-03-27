@@ -35,3 +35,5 @@ Il existe pour ce projet un dépôt distant disponible sur github à cet url : h
 - checksumMessage : Cette fonction n’agit pas sur la file. Elle calcul un checksum sur les valeurs cmd et data qui lui sont fournies en argument
 
 - sendMessage : Place le message décrit en argument dans la file
+
+- curMessageCmd, curMessageSize, curMessageChecksum : Fourni respectivement les valeurs, cmd, size et checksum du message courant

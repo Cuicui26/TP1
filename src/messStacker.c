@@ -55,3 +55,22 @@ bool sendMessage(uint8_t cmd, char data[],uint8_t size){
     if(lastPos==SIZE_STACK) lastPos=0;
     return true;
 }
+
+uint8_t curMessageCmd(){
+    //Renvoi le cmd du message courant
+    if(!haveMessage()) return 0;
+    uint8_t cmd = stackMess[curPos].cmd;
+    return cmd;
+}
+uint8_t curMessageSize(){
+    //Renvoi la size du message courant
+    if(!haveMessage()) return 0;
+    uint8_t size = stackMess[curPos].size;
+    return size;
+}
+uint8_t curMessageChecksum(){
+    //Renvoi le checksum du message courant
+    if(!haveMessage()) return 0;
+    uint8_t checksum = stackMess[curPos].checksum;
+    return checksum;
+}
